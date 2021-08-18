@@ -1,0 +1,6 @@
+<div class="categories">
+    <figure *ngFor="let category of categories" [routerLink]="['/books', category.label]">
+        <img src="{{category.image}}" height="60" width="60" />
+        <figcaption> {{category.name}} </figcaption>
+    </figure>
+</div>

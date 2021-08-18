@@ -1,0 +1,77 @@
+/*resource listing */
+
+.container {
+    margin-top: 5%;
+    width: 56%;
+    height: 330px;
+    float: right;
+    overflow: scroll;
+}
+
+span.bookTitle {
+    display: inline-block;
+    width: 75%;
+}
+
+th {
+    background-color: #ddd;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+}
+
+td:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.action {
+    float: right;
+    margin: 1%;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    width: 8%;
+    font-size: 18px;
+}
+
+.add {
+    float: right;
+    cursor: pointer;
+    font-size: 3px;
+    padding: 0px;
+}
+
+
+/*delete modal*/
+
+.modal-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-content p,
+h1 {
+    text-align: center;
+}
+
+.del {
+    width: 50%;
+    float: left;
+    flex: inline-block;
+    padding: 10px;
+}
+
+.close {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}

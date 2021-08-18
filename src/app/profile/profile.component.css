@@ -1,0 +1,37 @@
+/*profile details*/
+
+.table {
+    width: 55%;
+    float: right;
+    margin-top: 5%;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #ddd;
+}
+
+td {
+    padding-top: 0px;
+    border: none;
+}
+
+.edit {
+    float: right;
+    cursor: pointer;
+    font-size: 3px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px 0px 0px 3%;
+}
+
+@media screen and (max-width:768px) {
+    .table {
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 14%;
+        border: 1px solid #ddd;
+    }
+}

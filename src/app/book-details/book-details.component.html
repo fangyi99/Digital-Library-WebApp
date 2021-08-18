@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="coverArt">
+        <button class="overlay" (click)="addBookmark()"><span class="material-icons">bookmark</span></button>
+        <img src="{{book.coverArt}}" />
+        <button class="btn btn-lg btn-primary btn-block text-uppercase font-weight-bold" (click)="routeToContents()">Read Now!</button>
+    </div>
+    <div class="description">
+        <h4>{{book.title}}</h4>
+        <p>{{book.author}}</p>
+        <hr>
+        <p class="label">Summary</p>
+        <p>{{book.summary}}</p>
+        <hr>
+        <table>
+            <tr>
+                <th>Publisher</th>
+                <td>{{book.publisher}}</td>
+            </tr>
+            <tr>
+                <th>Publisher Date</th>
+                <td>{{book.publicationDate}}</td>
+            </tr>
+            <tr>
+                <th>ISBN</th>
+                <td>{{book.isbn}}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{book.genre}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

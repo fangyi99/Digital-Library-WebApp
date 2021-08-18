@@ -1,0 +1,44 @@
+/*divider*/
+
+.divider {
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+
+/*search bar*/
+
+.search {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 13%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.search input[type=text] {
+    margin-top: auto;
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    height: 50px;
+    width: 70%;
+    background: white;
+    border-radius: 5px;
+}
+
+.search input[type=text]:hover {
+    background: #f1f1f1;
+    height: 50px;
+}
+
+.search span {
+    display: block;
+    color: white;
+    margin-top: 12px;
+    cursor: pointer
+}

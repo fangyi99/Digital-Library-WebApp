@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                            <h3 class="login-heading mb-4">Register now!</h3>
+                            <form [formGroup]="registerForm" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+                                <div class="form-label-group"><b>Role:</b>
+                                    <input type="radio" formControlName="role" name="role" value="user">User
+                                    <input type="radio" formControlName="role" name="role" value="admin">Admin
+                                </div>
+                                <div class="form-label-group">
+                                    <input formControlName="name" id="name" class="form-control" placeholder="Username" required autofocus>
+                                    <label class="text-danger" *ngIf="registerForm.get('name').touched && registerForm.get('name').errors?.required">This
+                                        field is mandatory.</label>
+                                    <label class="text-danger" *ngIf="registerForm.get('name').touched && registerForm.get('name').hasError('maxlength')">20 characters max</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input formControlName="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+                                    <label class="text-danger" *ngIf="registerForm.get('email').touched && registerForm.get('email').errors?.required">This
+                                        field is mandatory</label>
+                                    <label class="text-danger" *ngIf="registerForm.get('email').touched && registerForm.get('email').hasError('email')">Invalid email</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input formControlName="password" id="password" class="form-control" placeholder="Password" type="password" required>
+                                    <label class="text-danger" *ngIf="registerForm.get('password').touched && registerForm.get('password').errors?.required">This
+                                        field is mandatory</label>
+                                    <label class="text-danger" *ngIf="registerForm.get('password').touched &&
+                                        registerForm.get('password').hasError('minlength')">
+                                        * Password must contain at least 8 characters
+                                    </label>
+                                </div>
+
+                                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" [disabled]="!registerForm.valid">Sign up</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/login.JPG" class="image">
+    </div>
+</div>

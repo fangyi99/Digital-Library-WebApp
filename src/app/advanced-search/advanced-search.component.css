@@ -1,0 +1,27 @@
+.container {
+    margin-top: 3%;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+}
+
+input[type=radio] {
+    margin-left: 20px;
+}
+
+input[type=text],
+input[type=number] {
+    width: 110%;
+    margin-left: -35%;
+}
+
+td {
+    border: none;
+}
+
+button {
+    width: 50%;
+    margin-left: 100%;
+}

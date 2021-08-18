@@ -1,0 +1,46 @@
+.sidebar {
+    width: fit-content;
+    float: left;
+    margin-left: 12%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+li {
+    width: 135%;
+}
+
+li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.material-icons {
+    font-size: 35px;
+}
+
+.label {
+    text-align: left;
+    width: 68%;
+}
+
+.dropdown-item {
+    width: 98%;
+}
+
+@media screen and (max-width:768px) {
+    .sidebar {
+        width: 23%;
+        margin-left: -10%;
+    }
+    span.material-icons {
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .sidebar {
+        margin-left: -5%;
+        margin-top: 15%;
+    }
+}

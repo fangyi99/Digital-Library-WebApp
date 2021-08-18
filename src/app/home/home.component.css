@@ -1,0 +1,24 @@
+.categories {
+    width: 65%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+figure {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin: 2%;
+    text-align: center;
+}
+
+figure:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+figure img {
+    vertical-align: top;
+    margin-bottom: 5%;
+}

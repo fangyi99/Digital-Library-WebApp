@@ -1,0 +1,82 @@
+/*bookmark listing */
+
+.table {
+    width: 55%;
+    float: right;
+    margin-top: 5%;
+}
+
+th {
+    background-color: #ddd;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+}
+
+span.bookTitle {
+    display: inline-block;
+    width: 85%;
+    height: 40px;
+}
+
+td:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+button {
+    float: right;
+    padding: 2px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 8%;
+    font-size: 18px;
+}
+
+
+/*delete modal*/
+
+.modal-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.content {
+    padding: 20px;
+}
+
+.modal-content p,
+h1 {
+    text-align: center;
+}
+
+.del {
+    width: 50%;
+    float: left;
+    flex: inline-block;
+    padding: 10px;
+}
+
+.close {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .table {
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 14%;
+        border: 1px solid #ddd;
+    }
+    button {
+        width: 10%;
+        font-size: 8px;
+    }
+}

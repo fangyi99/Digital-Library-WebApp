@@ -1,0 +1,21 @@
+<!-- sidebar -->
+<div class="sidebar">
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" [routerLink]="['/profile',id]">
+            <span class="material-icons">person</span> <span class="label">Profile</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center" [routerLink]="['/bookmarks',id]">
+            <span class="material-icons">bookmarks</span> <span class="label">Bookmarks</span>
+        </li>
+        <div *ngIf="role==['admin']" class="dropdown dropright">
+            <li class="list-group-item d-flex justify-content-between align-items-center dropdown-toggle" data-toggle="dropdown">
+                <span class="material-icons">lock</span> <span>Private Access</span>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" [routerLink]="['/users',id]"> Users</li>
+                    <li class="dropdown-item" [routerLink]="['/manage-resources',id]"> E-Resources</li>
+                    <li class="dropdown-item" [routerLink]="['/feedbacks',id]"> Feedbacks</li>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</div>

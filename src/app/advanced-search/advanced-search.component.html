@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="searchForm" novalidate autocomplete="off">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td colspan="2">Search for:
+                        <input type="radio" id="book" name="category" value="book" formControlName="category">
+                        <label for="book">Books</label>
+                        <input type="radio" id="magazine" name="category" value="magazine" formControlName="category">
+                        <label for="magazine">Magazines</label>
+                        <input type="radio" id="newspaper" name="category" value="newspaper" formControlName="category">
+                        <label for="newspaper">Newspapers</label>
+                        <input type="radio" id="journal" name="category" value="journal" formControlName="category">
+                        <label for="journal">Journals</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="title">Title:</label></td>
+                    <td><input type="text" id="title" name="title" formControlName="title"></td>
+                </tr>
+                <tr>
+                    <td><label for="author">Author:</label></td>
+                    <td><input type="text" id="author" name="author" formControlName="author"></td>
+                </tr>
+                <tr>
+                    <td><label for="publisher">Publisher:</label></td>
+                    <td><input type="text" id="publisher" name="publisher" formControlName="publisher"></td>
+                </tr>
+                <tr>
+                    <td><label for="publicationDate">Year of Publication:</label></td>
+                    <td><input type="number" id="publicationDate" name="publicationDate" formControlName="publicationDate"></td>
+                </tr><br>
+                <tr><button class="btn btn-primary" (click)="search(searchForm.value)"><i class="fa fa-search"></i> Search</button></tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </form>
+</div>

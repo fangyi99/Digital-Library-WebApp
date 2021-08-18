@@ -1,0 +1,17 @@
+<div class="form">
+    <h4>Feedback</h4>
+
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <input type="text" formControlName="email" id="email" placeholder="Email">
+        <label class="label" *ngIf="feedbackForm.get('email').hasError('email')">*Invalid email</label>
+        <br>
+        <input type="text" formControlName="subject" id="subject" placeholder="Subject">
+        <label class="label" *ngIf="feedbackForm.get('subject').touched && feedbackForm.get('subject').errors?.required">*This field is mandatory.</label>
+        <label class="label" *ngIf="feedbackForm.get('subject').touched && feedbackForm.get('subject').hasError('maxlength')">*30 characters max</label>
+        <br>
+        <textarea formControlName="feedback" id="feedback" placeholder="Feedback"></textarea>
+        <label class="label" *ngIf="feedbackForm.get('feedback').touched && feedbackForm.get('feedback').errors?.required">*This field is mandatory.</label>
+        <br>
+        <button type="submit" [disabled]="!feedbackForm.valid">Submit</button>
+    </form>
+</div>

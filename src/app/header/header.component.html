@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="collapse navbar-collapse">
+                <a class="navbar-brand" routerLink="/home">
+                    <img src="assets/images/logo.png" alt="logo" style="width:55px;">
+                </a>
+                <ul class="nav navbar-nav">
+                    <li><a class="nav-link" routerLink="/feedback" routerLinkActive="active">Feedback</a></li>
+                    <li *ngIf="auth.getSecureToken()==null"><a class="nav-link" routerLink="/login" routerLinkActive="active">Sign in</a></li>
+                    <li *ngIf="auth.getSecureToken()==null"><a class="nav-link" routerLink="/signup" routerLinkActive="active">Sign up</a></li>
+                    <li *ngIf="auth.getSecureToken()!=null"><a class="nav-link" [routerLink]="['/profile',auth.getUserId()]" routerLinkActive="active">Profile</a></li>
+                    <li *ngIf="auth.getSecureToken()!=null"><a class="nav-link" routerLink="/login" routerLinkActive="active" (click)="auth.logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="divider">
+    <div class="search" *ngIf="router.url === '/home' || router.url === '/books' || router.url === '/books/book' || router.url === '/books/magazine' || router.url === '/books/newspaper' || router.url === '/books/journal'">
+        <input type="text" placeholder="Start your search..." autocomplete="off" [(ngModel)]="searchInput" (ngModelChange)="search()">
+        <span routerLink="/search">ADVANCED SEARCH</span>
+    </div>
+</div>
